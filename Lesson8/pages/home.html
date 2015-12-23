@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store | Welcome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.5/css/foundation.min.css">
+    <link rel="stylesheet" href="content/styles.css">
+</head>
+<body ng-app="myStoreApp">
+    <div class="top-bar" ng-controller="NavbarController">
+        <div class="row">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">My Store </li>
+                    <li class="has-submenu"><a href="#">Brands</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li ng-repeat="category in categories"><a href="#{{category.url}}">{{category.name}}</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li>
+                        <input type="search" placeholder="Search"></li>
+                    <li>
+                        <button type="button" class="button">
+                            Search</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row columns">
+        <nav aria-label="You are here:" role="navigation">
+							<ul class="breadcrumbs">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Phone</a></li>
+								<li class="disabled">Samsung</li>
+								<li>
+									<span class="show-for-sr">Current: </span> Galaxy S6
+								</li>
+							</ul>
+						</nav>
+    </div>
+    <div class="row"  ng-view >
+
+    </div>
+    <div class="column row">
+        <hr>
+        <ul class="tabs" data-tabs id="example-tabs">
+            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Reviews</a></li>
+            <li class="tabs-title"><a href="#panel2">Similar Products</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="example-tabs">
+            <div class="tabs-panel is-active" id="panel1">
+                <product-reviews></product-reviews>
+            </div>
+            <div class="tabs-panel" id="panel2">
+                <similar-products></similar-products>
+            </div>
+        </div>
+    </div>
+    <div class="row column">
+        <hr>
+        <ul class="menu">
+            <li>My Store</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="float-right">Copyright 2016</li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.0.5/js/foundation.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.js"></script>
+    <script>
+        $(document).foundation();																																						
+	</script>
+    <script src="mystoreapp/app.js"></script>
+    <script src="mystoreapp/directives.js"></script>
+    <script src="mystoreapp/Controllers/navbarController.js"></script>
+    <script src="mystoreapp/Controllers/ProductController.js"></script>
+
+</body>
+</html>

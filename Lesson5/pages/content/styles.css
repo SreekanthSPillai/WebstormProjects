@@ -1,0 +1,11 @@
+﻿input {
+    transition:all linear 0.5s;
+    background: transparent;
+}
+input.ng-valid{
+    border-right: 5px solid #57A83F;
+}
+
+input.ng-invalid  {
+    border-right: 5px solid #E03930;
+}

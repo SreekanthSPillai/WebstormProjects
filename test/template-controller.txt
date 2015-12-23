@@ -1,0 +1,22 @@
+﻿DOM Manipulation – browser converts all the HTML in your web page.
+History – Manipulating browser history
+Module Loading – loading of module in browser.
+Routing – way to track, where are we and where are we going.
+Caching – caching to retrievals fast.
+Object Modeling – binding Object to DOM
+Data Binding – binding model/variable to view.
+Ajax/Promises – require in case of Asynchronous call.
+View loading – loading the view in browser.
+Options to minimize the challages with SPAs
+Sammy.js, History.js, Require.js, Jquery.js, etc.
+
+
+this.tab = 1;
+
+    this.isSet = function(checkTab) {
+      return this.tab === checkTab;
+    };
+
+    this.setTab = function(setTab) {
+      this.tab = setTab;
+    };

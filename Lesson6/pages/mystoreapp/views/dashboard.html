@@ -1,0 +1,117 @@
+﻿<div class="customers view indent">
+    <div class="container-fluid">
+        <div class="row rowDashboard">
+            <h6>Welcome {{userInfo.profile.family_name}},&nbsp;{{userInfo.profile.given_name}}</h6>
+            <div class="col-sm-3 col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Agent Home</div>
+                    <div class="panel-body">
+                        <ul class="nav nav-sidebar">
+                            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">Reports</a></li>
+                            <li><a href="#">Analytics</a></li>
+                            <li><a href="#">Export</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Recently Accessed</div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Links</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Linda, Paul</td>
+                                        <td>
+                                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                            <span class="glyphicon glyphicon glyphicon-comment" aria-hidden="true"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>George Peter</td>
+                                        <td>
+                                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                            <span class="glyphicon glyphicon glyphicon-comment" aria-hidden="true"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 col-md-10" style="top:-40px;">
+                <h1 class="page-header">Dashboard</h1>
+
+                <div class="row placeholders">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="exampleInputName2">Sales activity for</label>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Me <span class="caret"></span>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">over the last</label>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="periodDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                90 days
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="periodDropDown">
+                                <li><a href="#">30 days</a></li>
+                                <li><a href="#">60 days</a></li>
+                                <li><a href="#">90 days</a></li>
+                            </ul>
+                        </div>
+                        <button type="submit" class="btn btn-default">Show</button>
+                    </form>
+                    <div class="col-xs-6 col-sm-4 placeholder">
+                        <div id="donut-example1" class="img-responsive"></div>
+                        <h4>Quote Summary</h4>
+                        <span class="text-muted">Chart Demo 1</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 placeholder">
+                        <div id="donut-example2" class="img-responsive"></div>
+                        <h4>Sales/Channel Summary</h4>
+                        <span class="text-muted">Chart Demo 2</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 placeholder">
+                        <div id="donut-example3" class="img-responsive"></div>
+                        <h4>Sale/LoB Summary</h4>
+                        <span class="text-muted">Chart Demo 3</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+<style>
+    div.rowDashboard {
+        background-color: #ececec;
+        border: 1px solid #bdbdbd;
+    }
+
+    .red, .red a {
+        color: red;
+    }
+
+    .amber, .amber a {
+        color: orange;
+    }
+
+    .green, .green a {
+        color: green;
+    }
+</style>
+
+
+

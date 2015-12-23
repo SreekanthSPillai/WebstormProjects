@@ -1,0 +1,28 @@
+<h4>
+    Reviews</h4>
+<div class="media-object stack-for-small" ng-repeat="userreview in reviewCtrl.userreviews">
+    <div class="media-object-section">
+        <img class="thumbnail" src="http://placehold.it/200x200">
+    </div>
+    <div class="media-object-section">
+        <h5>
+            {{userreview.author}}</h5>
+        <p>
+            {{userreview.comment}}</p>
+    </div>
+</div>
+<form name="reviewForm" ng-submit="reviewForm.$valid && reviewCtrl.addReview();"
+      novalidate>
+    <label>
+        My Review
+        <textarea ng-model="reviewCtrl.newReview.comment" placeholder="None"></textarea>
+    </label>
+    <label>
+        Email
+        <input ng-model="reviewCtrl.newReview.author" type="email" class="form-control" placeholder="username@example.org"
+               title="Email" required />
+    </label>
+    <button class="button">
+        Submit Review</button>
+    Form validated:{{reviewForm.$valid}}
+</form>
