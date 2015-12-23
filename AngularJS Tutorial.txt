@@ -1,0 +1,23 @@
+Lesson 1: Hello World AngularJS
+	Add ngApp directive to bootstrap the app.
+	Add simple template with an expression.
+	First Controller
+	First Expression
+Lesson 2: Baby Steps to AngularJS
+	AngularJS Built In Filters 
+
+Lesson 3: Refector AngularJS code.
+	move script style elements to a new file
+	declare the controller dependency. $scope
+	What are Scopes?
+	Scope is an object that refers to the application model. It is an execution context for expressions. 
+	Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events.
+	Each Angular application has exactly one root scope, but may have several child scopes.
+
+Image Gallery => phones
+Templates => 3 tabs
+Services
+DI => dataServices
+Routing =>
+UnitTesting =>
+
