@@ -1,18 +1,43 @@
+How To Setup the Lesson.
+
+Install NodeJS
+
+Lesson 3 onwards requires a webserver to test.
+for running each lesson type following command in nodeJs command prompt
+
+> node "{physical path to your local repo}\WebstormProjects\Lesson3\Webserver.js"
+and browse localhost:3000
+
+> node "{physical path to your local repo}\WebstormProjects\Lesson4\Webserver.js"
+and browse localhost:3000
+
+For Testing lesson 5
+> node "{physical path to your local repo}\WebstormProjects\Lesson5\Webserver.js"
+and browse localhost:3000
+
+
 Lesson 1: Hello World AngularJS
 	Add ngApp directive to bootstrap the app.
 	Add simple template with an expression.
 	First Controller
 	First Expression
-Lesson 2: Baby Steps to AngularJS
-	AngularJS Built In Filters 
 
-Lesson 3: Refector AngularJS code.
-	move script style elements to a new file
-	declare the controller dependency. $scope
+Lesson 2: Baby Steps to AngularJS
+	AngularJS Built In Filters, ng-repeat, json data binding 
+
+Lesson 3: Refactor AngularJS code.
+	Move script style elements to a new file, app.js, NavbarController.js
+	Declare the controller dependency. $scope
 	What are Scopes?
 	Scope is an object that refers to the application model. It is an execution context for expressions. 
 	Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events.
 	Each Angular application has exactly one root scope, but may have several child scopes.
+
+Lesson 4: Form, model binding in AngularJS 
+	Product Review Form, ng-click, ng-model
+
+Lesson 5: 
+
 
 Image Gallery => phones
 Templates => 3 tabs
