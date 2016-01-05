@@ -1,0 +1,36 @@
+﻿<table class="table table-hover table-striped table-condensed table-bordered policiesTable">
+    <thead>
+        <tr>
+            <th data-ng-click="vm.setOrder('policyNumber')">Policy Number</th>
+            <th data-ng-click="vm.setOrder('startDate')">Start Date</th>
+            <th data-ng-click="vm.setOrder('endDate')">End Date</th>
+            <th data-ng-click="vm.setOrder('policyType')">Policy Type</th>
+           <th>Policy Link</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-hide="vm.customer.policies || vm.customer.policies.length > 0" class="error">
+            <td colspan="5">
+                <div class="text-center"><strong>No policies found</strong></div>
+            </td>
+        </tr>
+        <tr data-ng-repeat="policy in vm.customer.policies | orderBy:vm.orderby:vm.reverse" class="repeat-animation">
+            <td>
+                {{ policy.policyNumber }}
+            </td>
+            <td>
+                {{ policy.startDate | date:'MM/dd/yyyy' }}
+            </td>
+            <td>
+                {{ policy.endDate | date:'MM/dd/yyyy' }}
+            </td>
+            <td>
+                {{ policy.policyType }}
+            </td>        
+            <td>
+                <a ng-href="https://insteg-my.sharepoint.com/personal/ins_insteg_com/Documents/{{policy.policyNumber}}" target="_blank">View Policy</a>
+            </td>
+        </tr>        
+    </tbody>
+</table>

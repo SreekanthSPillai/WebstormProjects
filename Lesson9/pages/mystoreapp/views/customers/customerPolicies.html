@@ -1,0 +1,21 @@
+﻿<div class="policies view">
+    <div class="container">
+        <header>
+            <h3><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;Customer Policies</h3>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div>
+                        <h4>Policies for <a href="#/customerEdit/{{vm.customer.id}}">{{ vm.customer.firstName + ' ' + vm.customer.lastName }} <i class="icon-edit editIcon"></i></a></h4>
+                        {{vm.customer.address}}
+                        <br />
+                        {{vm.customer.city}}, {{vm.customer.state}}
+                        <br /><br />
+                    </div>
+                    <div data-ng-include="'/app/office365App/views/policies/policiesTable.html'" data-ng-controller="PolicyChildController as vm" />
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
