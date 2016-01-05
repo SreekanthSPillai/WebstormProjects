@@ -57,12 +57,14 @@
 	<div class="clearfix"></div>
 	<!-- Main Container -->
     <div class="container">
-	<div class="jumbotron">
-        <ol class="breadcrumb">
+	<hr/><br/>
+	<ol class="breadcrumb">
 		  <li><a href="#">Phones</a></li>
 		  <li><a href="#">Samsung</a></li>
 		  <li class="active">Galaxy S6</li>
 		</ol>
+	<div class="jumbotron" style="display:none;">
+        
         <div class="row carousel-holder">
 			<div class="col-md-12">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -131,6 +133,12 @@
     <script src="mystoreapp/directives.js"></script>
     <script src="mystoreapp/Controllers/navbarController.js"></script>
     <script src="mystoreapp/Controllers/ProductController.js"></script>
+	<script>
+	$('.nav-tabs a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	});
+	<script>
 
 </body>
 </html>

@@ -1,5 +1,12 @@
 (function () {
 
+	angular.module('myStoreApp').directive('productInfo', function(){
+        return {
+            restrict: 'E',
+            templateUrl: 'mystoreapp/directives/productinfo.html'
+        };
+    });
+	
     angular.module('myStoreApp').directive('similarProducts', function(){
         return {
             restrict: 'E',

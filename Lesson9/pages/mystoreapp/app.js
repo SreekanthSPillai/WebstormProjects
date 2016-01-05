@@ -19,12 +19,12 @@
           templateUrl: viewBase + 'product/listing.html',
           controllerAs: 'vm'
         })
-        .when('/product/:productId', {
+        .when('/product/:phonename', {
           controller: 'ProductController',
           templateUrl: viewBase + 'product/details.html',
           controllerAs: 'vm'
         })
-        .when('/about', {
+		.when('/about', {
           controller: 'AboutController',
           templateUrl: viewBase + 'about.html',
           controllerAs: 'vm'

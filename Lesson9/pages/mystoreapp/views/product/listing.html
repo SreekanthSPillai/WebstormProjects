@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-sm-6 col-md-3 inline" ng-repeat="phone in phones | filter:query | orderBy:orderProp">
     <div class="thumbnail">
-		<a href="#/phones/{{phone.id}}" class="thumbnail">
+		<a href="#/product/{{phone.id}}" class="thumbnail">
 			<img ng-src="{{phone.imageUrl}}" ng-alt="{{phone.name}}">
 		</a>      
       <div class="caption">
