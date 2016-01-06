@@ -1,0 +1,64 @@
+﻿<div class="policies view">
+    <div class="container">
+        <header>
+            <h3><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;All Customer Policies</h3>
+        </header>
+        <br />
+        <div class="customerEdit">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="navbarText col-sm-3">Filter by Customer/Policy:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control novalidate"
+                               data-ng-model="vm.searchText"
+                               data-ng-change="vm.searchTextChanged();" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <div class="row show-hide-animation" data-ng-show="vm.customers.length > 0">
+                <div class="col-md-12">
+                    <div data-pagination
+                         data-on-select-page="vm.pageChanged(page)"
+                         data-total-items="vm.totalRecords"
+                         data-items-per-page="vm.pageSize"
+                         data-page="vm.currentPage"
+                         data-boundary-links="true"
+                         class="pagination-sm"></div>
+                    <div>Showing {{ vm.numRecordsDisplaying }} of {{ vm.totalRecords}} total customers</div>
+                    <div data-ng-show="searchText.length > 0">Filtering by "{{ vm.searchText }}"</div>
+                    <br />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 repeat-animation" data-ng-repeat="customer in vm.pagedCustomers | orderBy:'lastName'">
+                    <div>
+                        <h4><a href="#/CustomerPolicies/{{customer.id}}">{{ customer.fname + ' ' + customer.lname }}</a></h4>
+                    </div>
+                    <div data-ng-include="'/app/office365App/views/policies/policiesTable.html'" data-ng-controller="PolicyChildController as vm" />
+                </div>
+            </div>
+            <div class="row show-hide-animation" data-ng-show="vm.pagedCustomers.length == 0">
+                <div class="col-md-12">
+                    <h4>No customers found</h4>
+                </div>
+            </div>
+            <div class="row show-hide-animation" data-ng-show="vm.customers.length > 0" style="padding-left: 15px;">
+                <div class="col-md-12">
+                    <div data-pagination
+                         data-on-select-page="vm.pageChanged(page)"
+                         data-total-items="vm.totalRecords"
+                         data-items-per-page="vm.pageSize"
+                         data-page="vm.currentPage"
+                         data-boundary-links="true"
+                         class="pagination-sm"></div>
+                    <h5>Showing {{ vm.numRecordsDisplaying }} of {{ vm.totalRecords}} total customers</h5>
+                    <span data-ng-show="searchText.length > 0">Filtering by "{{ vm.searchText }}"</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br />
+</div>
+
